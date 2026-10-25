@@ -17,3 +17,9 @@ insert into board_games (name, publisher, price, rental_price_per_day, min_playe
     ('Catan',       'Galakta', 169.00, 8.00, 3, 4, 90, 10, 'Strategiczna', 1995, 'Handel i budowa osad na wyspie Catan.'),
     ('Dixit',       'Rebel',   139.00, 6.00, 3, 8, 30, 8,  'Imprezowa',    2008, 'Skojarzenia budowane na ilustracjach.'),
     ('Carcassonne', 'Bard',     99.00, 5.00, 2, 5, 45, 7,  'Rodzinna',     2000, 'Układanie kafelków i zdobywanie punktów.');
+
+-- ===== LAB 02 · game_availability =====
+insert into game_availability (board_game_id, quantity_total, quantity_available, updated_at) values
+    (1, 3, 2, current_timestamp),
+    (2, 2, 2, current_timestamp),
+    (3, 4, 3, current_timestamp);
