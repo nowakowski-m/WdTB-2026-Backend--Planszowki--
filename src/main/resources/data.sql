@@ -23,3 +23,9 @@ insert into game_availability (board_game_id, quantity_total, quantity_available
     (1, 3, 2, current_timestamp),
     (2, 2, 2, current_timestamp),
     (3, 4, 3, current_timestamp);
+
+-- ===== LAB 02 · game_rentals =====
+insert into game_rentals (user_id, board_game_id, rented_at, due_at, returned_at, total_price, deposit, status, notes) values
+    (1, 1, dateadd('DAY', -10, current_timestamp), dateadd('DAY', -3, current_timestamp), null, 56.00, 50.00, 'ACTIVE', 'Po terminie'),
+    (2, 3, dateadd('DAY', -2, current_timestamp),  dateadd('DAY', 5, current_timestamp),  null, 35.00, 30.00, 'ACTIVE', null),
+    (3, 2, dateadd('DAY', -14, current_timestamp), dateadd('DAY', -7, current_timestamp), dateadd('DAY', -7, current_timestamp), 42.00, 30.00, 'RETURNED', null);
